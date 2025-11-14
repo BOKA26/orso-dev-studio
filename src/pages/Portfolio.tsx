@@ -11,6 +11,7 @@ import projectMevos from "@/assets/project-mevos.png";
 import projectPortfolio from "@/assets/project-portfolio.png";
 import projectEgliConnect from "@/assets/project-egliconnect.png";
 import projectDadi from "@/assets/project-dadi.png";
+import projectChambreHaute from "@/assets/project-chambre-haute.png";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
@@ -29,6 +30,16 @@ const Portfolio = () => {
     },
     {
       id: 2,
+      name: "La Chambre Haute - Site Web Église",
+      description: "Site web pour l'Église Pentecôtiste Unie Internationale de Bingerville. Présentation de l'église, horaires des cultes, diffusion en direct, départements, galerie photos et formulaire de contact.",
+      topics: ["Lovable", "Église", "Streaming", "React", "Tailwind CSS"],
+      html_url: "#",
+      homepage: "https://chambre-haute.lovable.app",
+      stargazers_count: 0,
+      image: projectChambreHaute,
+    },
+    {
+      id: 3,
       name: "DADI - Site Web ONG",
       description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
       topics: ["Lovable", "ONG", "Solidarité", "Dons en ligne", "React"],
@@ -124,6 +135,12 @@ const Portfolio = () => {
       description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
       homepage: "https://ong-dadi.offotechword.com",
       image: projectDadi
+    },
+    "chambre-haute": {
+      name: "La Chambre Haute - Site Web Église",
+      description: "Site web pour l'Église Pentecôtiste Unie Internationale de Bingerville. Présentation de l'église, horaires des cultes, diffusion en direct, départements, galerie photos et formulaire de contact.",
+      homepage: "https://chambre-haute.lovable.app",
+      image: projectChambreHaute
     },
   };
 
