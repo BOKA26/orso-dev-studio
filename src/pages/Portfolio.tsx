@@ -9,6 +9,7 @@ import projectMobile from "@/assets/project-mobile.jpg";
 import projectOffotechword from "@/assets/project-offotechword.png";
 import projectMevos from "@/assets/project-mevos.png";
 import projectPortfolio from "@/assets/project-portfolio.png";
+import projectEgliConnect from "@/assets/project-egliconnect.png";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
@@ -37,13 +38,13 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      name: "SaaS de Gestion d'Église",
-      description: "Plateforme multi-tenant pour la gestion d'églises avec dashboard administrateur, gestion des fidèles, événements, dons en ligne et système de communication intégré.",
-      topics: ["Supabase", "Lovable", "Tailwind CSS", "React"],
+      name: "EgliConnect - SaaS de Gestion d'Église",
+      description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
+      topics: ["Supabase", "Lovable", "Paystack", "OpenAI", "Multi-tenant"],
       html_url: "#",
       homepage: "https://saas.offotechword.com",
       stargazers_count: 0,
-      image: projectChurch,
+      image: projectEgliConnect,
     },
     {
       id: 4,
@@ -60,12 +61,16 @@ const Portfolio = () => {
   // Mapping des liens homepage pour certains projets GitHub
   const projectLinks: Record<string, { homepage?: string; image?: string; name?: string; description?: string }> = {
     "saas-gestion-d-eglise": { 
+      name: "EgliConnect - SaaS de Gestion d'Église",
+      description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
       homepage: "https://saas.offotechword.com",
-      image: projectChurch 
+      image: projectEgliConnect 
     },
     "Saas Gestion D Eglise": { 
+      name: "EgliConnect - SaaS de Gestion d'Église",
+      description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
       homepage: "https://saas.offotechword.com",
-      image: projectChurch 
+      image: projectEgliConnect 
     },
     "portfolio": {
       name: "Portfolio Professionnel Offotechword",
