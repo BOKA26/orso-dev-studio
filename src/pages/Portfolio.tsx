@@ -10,6 +10,7 @@ import projectOffotechword from "@/assets/project-offotechword.png";
 import projectMevos from "@/assets/project-mevos.png";
 import projectPortfolio from "@/assets/project-portfolio.png";
 import projectEgliConnect from "@/assets/project-egliconnect.png";
+import projectDadi from "@/assets/project-dadi.png";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
@@ -28,6 +29,16 @@ const Portfolio = () => {
     },
     {
       id: 2,
+      name: "DADI - Site Web ONG",
+      description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
+      topics: ["Lovable", "ONG", "Solidarité", "Dons en ligne", "React"],
+      html_url: "#",
+      homepage: "https://ong-dadi.offotechword.com",
+      stargazers_count: 0,
+      image: projectDadi,
+    },
+    {
+      id: 3,
       name: "BokaTrade Marketplace",
       description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
       topics: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
@@ -37,7 +48,7 @@ const Portfolio = () => {
       image: projectMarketplace,
     },
     {
-      id: 3,
+      id: 4,
       name: "EgliConnect - SaaS de Gestion d'Église",
       description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
       topics: ["Supabase", "Lovable", "Paystack", "OpenAI", "Multi-tenant"],
@@ -47,7 +58,7 @@ const Portfolio = () => {
       image: projectEgliConnect,
     },
     {
-      id: 4,
+      id: 5,
       name: "App Mobile E-Commerce",
       description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
       topics: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
@@ -95,6 +106,12 @@ const Portfolio = () => {
       description: "Plateforme de services IA sans code pour entreprises et startups. Intégration d'outils IA, création de chatbots intelligents 24/7, automatisation de processus métiers et formation personnalisée.",
       homepage: "https://offotechword.lovable.app",
       image: projectOffotechword
+    },
+    "dadi": {
+      name: "DADI - Site Web ONG",
+      description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
+      homepage: "https://ong-dadi.offotechword.com",
+      image: projectDadi
     },
   };
 
