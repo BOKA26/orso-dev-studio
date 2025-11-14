@@ -113,6 +113,12 @@ const Portfolio = () => {
       homepage: "https://ong-dadi.offotechword.com",
       image: projectDadi
     },
+    "Dadi Dignity Compass": {
+      name: "DADI - Site Web ONG",
+      description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
+      homepage: "https://ong-dadi.offotechword.com",
+      image: projectDadi
+    },
   };
 
   // Enrichir les projets GitHub avec les liens et images personnalisés
