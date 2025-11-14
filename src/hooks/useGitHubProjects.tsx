@@ -14,8 +14,7 @@ interface GitHubRepo {
   fork: boolean;
 }
 
-// Remplacez par votre vrai username GitHub (ex: "jeanboka", "orso-dev", etc.)
-const GITHUB_USERNAME = "orsoboka";
+const GITHUB_USERNAME = "BOKA26";
 
 export const useGitHubProjects = () => {
   return useQuery({
