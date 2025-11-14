@@ -44,8 +44,33 @@ const Portfolio = () => {
     },
   ];
 
-  // Utiliser les projets GitHub ou les projets statiques en fallback
-  const displayProjects = error ? staticProjects : githubProjects;
+  // Mapping des liens homepage pour certains projets GitHub
+  const projectLinks: Record<string, { homepage?: string; image?: string }> = {
+    "saas-gestion-d-eglise": { 
+      homepage: "https://saas.offotechword.com",
+      image: projectChurch 
+    },
+    "Saas Gestion D Eglise": { 
+      homepage: "https://saas.offotechword.com",
+      image: projectChurch 
+    },
+  };
+
+  // Enrichir les projets GitHub avec les liens et images personnalisés
+  const enrichedGithubProjects = githubProjects?.map(repo => {
+    const customData = projectLinks[repo.name] || projectLinks[repo.name.toLowerCase()];
+    if (customData) {
+      return {
+        ...repo,
+        homepage: customData.homepage || repo.homepage,
+        image: customData.image,
+      };
+    }
+    return repo;
+  });
+
+  // Utiliser les projets GitHub enrichis ou les projets statiques en fallback
+  const displayProjects = error ? staticProjects : enrichedGithubProjects;
 
   return (
     <div className="min-h-screen bg-background">
