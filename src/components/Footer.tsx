@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-border bg-secondary/30">
+    <footer className="border-t border-primary/20 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Logo et Description */}
@@ -21,20 +21,20 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="OBJ Logo" className="h-12 w-auto" />
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground/80">
               Développeur Web & No-Code Expert spécialisé en Lovable, Supabase. Création de solutions digitales modernes.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Navigation</h3>
+            <h3 className="font-semibold text-primary-foreground mb-4">Navigation</h3>
             <ul className="space-y-3">
               {navigation.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                    className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -45,18 +45,18 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
+            <h3 className="font-semibold text-primary-foreground mb-4">Services</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-muted-foreground">Développement SaaS</li>
-              <li className="text-sm text-muted-foreground">Marketplace & E-commerce</li>
-              <li className="text-sm text-muted-foreground">Applications Mobiles</li>
-              <li className="text-sm text-muted-foreground">Design & Infographie</li>
+              <li className="text-sm text-primary-foreground/80">Développement SaaS</li>
+              <li className="text-sm text-primary-foreground/80">Marketplace & E-commerce</li>
+              <li className="text-sm text-primary-foreground/80">Applications Mobiles</li>
+              <li className="text-sm text-primary-foreground/80">Design & Infographie</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Contact</h3>
+            <h3 className="font-semibold text-primary-foreground mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
