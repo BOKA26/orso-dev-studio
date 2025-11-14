@@ -30,9 +30,9 @@ export const useGitHubProjects = () => {
       
       const repos: GitHubRepo[] = await response.json();
       
-      // Filtrer les repos sans description et les trier par date de mise à jour
+      // Filtrer les forks et trier par date de mise à jour
       return repos
-        .filter(repo => repo.description && !repo.fork)
+        .filter(repo => !repo.fork)
         .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
     },
     staleTime: 1000 * 60 * 5, // Cache pendant 5 minutes
