@@ -15,6 +15,16 @@ const Portfolio = () => {
   const staticProjects = [
     {
       id: 1,
+      name: "Offotechword - Solutions IA Sans Code",
+      description: "Plateforme de services IA sans code pour entreprises et startups. Intégration d'outils IA, création de chatbots intelligents 24/7, automatisation de processus métiers et formation personnalisée.",
+      topics: ["IA", "Lovable", "Chatbots", "Automatisation", "No-Code"],
+      html_url: "#",
+      homepage: "https://offotechword.lovable.app",
+      stargazers_count: 0,
+      image: projectOffotechword,
+    },
+    {
+      id: 2,
       name: "BokaTrade Marketplace",
       description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
       topics: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
@@ -24,7 +34,7 @@ const Portfolio = () => {
       image: projectMarketplace,
     },
     {
-      id: 2,
+      id: 3,
       name: "SaaS de Gestion d'Église",
       description: "Plateforme multi-tenant pour la gestion d'églises avec dashboard administrateur, gestion des fidèles, événements, dons en ligne et système de communication intégré.",
       topics: ["Supabase", "Lovable", "Tailwind CSS", "React"],
@@ -34,7 +44,7 @@ const Portfolio = () => {
       image: projectChurch,
     },
     {
-      id: 3,
+      id: 4,
       name: "App Mobile E-Commerce",
       description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
       topics: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
@@ -46,7 +56,7 @@ const Portfolio = () => {
   ];
 
   // Mapping des liens homepage pour certains projets GitHub
-  const projectLinks: Record<string, { homepage?: string; image?: string }> = {
+  const projectLinks: Record<string, { homepage?: string; image?: string; name?: string; description?: string }> = {
     "saas-gestion-d-eglise": { 
       homepage: "https://saas.offotechword.com",
       image: projectChurch 
@@ -63,6 +73,14 @@ const Portfolio = () => {
       image: projectMarketplace
     },
     "offotechword": {
+      name: "Offotechword - Solutions IA Sans Code",
+      description: "Plateforme de services IA sans code pour entreprises et startups. Intégration d'outils IA, création de chatbots intelligents 24/7, automatisation de processus métiers et formation personnalisée.",
+      homepage: "https://offotechword.lovable.app",
+      image: projectOffotechword
+    },
+    "offotechword1": {
+      name: "Offotechword - Solutions IA Sans Code",
+      description: "Plateforme de services IA sans code pour entreprises et startups. Intégration d'outils IA, création de chatbots intelligents 24/7, automatisation de processus métiers et formation personnalisée.",
       homepage: "https://offotechword.lovable.app",
       image: projectOffotechword
     },
@@ -74,6 +92,8 @@ const Portfolio = () => {
     if (customData) {
       return {
         ...repo,
+        name: customData.name || repo.name,
+        description: customData.description || repo.description,
         homepage: customData.homepage || repo.homepage,
         image: customData.image,
       };
