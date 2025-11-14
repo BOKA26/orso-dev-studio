@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, ShoppingCart, Palette } from "lucide-react";
+import { ArrowRight, Code, ShoppingCart, Palette, TrendingUp, Users, Award, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
+import infographic1 from "@/assets/infographic-1.jpg";
+import infographic2 from "@/assets/infographic-2.jpg";
+import infographic3 from "@/assets/infographic-3.jpg";
+import infographic4 from "@/assets/infographic-4.jpg";
 
 const Index = () => {
   const services = [
@@ -22,6 +26,33 @@ const Index = () => {
       icon: Palette,
       title: "Design & Communication",
       description: "Identité visuelle, UI/UX design et stratégie de communication digitale.",
+    },
+  ];
+
+  const infographics = [
+    {
+      image: infographic1,
+      title: "Visualisation de Données",
+      description: "Tableaux de bord interactifs et graphiques statistiques professionnels",
+      icon: TrendingUp,
+    },
+    {
+      image: infographic2,
+      title: "Communication Digitale",
+      description: "Infographies pour réseaux sociaux et campagnes marketing",
+      icon: Users,
+    },
+    {
+      image: infographic3,
+      title: "Processus & Workflows",
+      description: "Diagrammes explicatifs et guides visuels étape par étape",
+      icon: Target,
+    },
+    {
+      image: infographic4,
+      title: "Rapports Corporate",
+      description: "Présentations et rapports d'entreprise avec identité visuelle forte",
+      icon: Award,
     },
   ];
 
@@ -102,6 +133,56 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Infographic Gallery Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Design & Infographie</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Communication visuelle percutante pour valoriser vos données et messages
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {infographics.map((item, index) => (
+              <Card 
+                key={index} 
+                className="overflow-hidden hover:shadow-medium transition-all duration-500 hover:scale-105 animate-fade-in group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="flex items-center gap-3 text-white">
+                      <div className="p-2 rounded-lg bg-accent/90">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg">{item.title}</h3>
+                        <p className="text-sm text-white/90">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
+              <Link to="/portfolio">
+                Voir tous mes projets <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
