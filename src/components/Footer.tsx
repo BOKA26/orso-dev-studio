@@ -62,21 +62,21 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                 <a
                   href="mailto:orso.aka28@gmail.com"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
                   orso.aka28@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-primary-foreground/80">
                   <div>0757705986</div>
                   <div>0564945806</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Abidjan, Bergerville</span>
+                <span className="text-sm text-primary-foreground/80">Abidjan, Bergerville</span>
               </li>
             </ul>
 
@@ -84,21 +84,21 @@ const Footer = () => {
             <div className="flex items-center gap-3 mt-6">
               <a
                 href="mailto:orso.aka28@gmail.com"
-                className="p-2 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="p-2 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="p-2 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="h-4 w-4" />
@@ -108,8 +108,8 @@ const Footer = () => {
         </div>
 
         {/* Ligne de séparation et copyright */}
-        <div className="border-t border-border mt-12 pt-8">
-          <p className="text-sm text-muted-foreground text-center">
+        <div className="border-t border-primary-foreground/20 mt-12 pt-8">
+          <p className="text-sm text-primary-foreground/80 text-center">
             © {new Date().getFullYear()} Orso Boka Jean. Tous droits réservés.
           </p>
         </div>
