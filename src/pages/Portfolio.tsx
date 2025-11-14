@@ -54,7 +54,7 @@ const Portfolio = () => {
       description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
       topics: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
       html_url: "#",
-      homepage: null,
+      homepage: "https://db-forge-spark.lovable.app/",
       stargazers_count: 0,
       image: projectMarketplace,
     },
