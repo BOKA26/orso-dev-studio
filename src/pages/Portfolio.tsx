@@ -6,6 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import projectMarketplace from "@/assets/project-marketplace.jpg";
 import projectChurch from "@/assets/project-church.jpg";
 import projectMobile from "@/assets/project-mobile.jpg";
+import projectOffotechword from "@/assets/project-offotechword.png";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
@@ -62,7 +63,8 @@ const Portfolio = () => {
       image: projectMarketplace
     },
     "offotechword": {
-      homepage: "https://offotechword.lovable.app"
+      homepage: "https://offotechword.lovable.app",
+      image: projectOffotechword
     },
   };
 
