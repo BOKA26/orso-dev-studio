@@ -88,8 +88,8 @@ const Portfolio = () => {
                       <ProjectCard
                         key={repo.id}
                         title={repo.name}
-                        description={repo.description || "Aucune description disponible"}
-                        technologies={repo.topics.length > 0 ? repo.topics : ["Code"]}
+                        description={repo.description || "Projet de développement web"}
+                        technologies={repo.topics.length > 0 ? repo.topics : [repo.language || "Code"]}
                         githubUrl={repo.html_url !== "#" ? repo.html_url : undefined}
                         demoUrl={repo.homepage}
                         stars={repo.stargazers_count}
