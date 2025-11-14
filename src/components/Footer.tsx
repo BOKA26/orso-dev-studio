@@ -69,11 +69,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+243 000 000 000</span>
+                <div className="text-sm text-muted-foreground">
+                  <div>0757705986</div>
+                  <div>0564945806</div>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Kinshasa, RD Congo</span>
+                <span className="text-sm text-muted-foreground">Abidjan, Bergerville</span>
               </li>
             </ul>
 
