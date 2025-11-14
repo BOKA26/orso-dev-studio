@@ -25,27 +25,27 @@ const ProjectCard = ({ title, description, technologies, image, githubUrl, demoU
           />
         </div>
       )}
-      <CardHeader>
-        <CardTitle className="text-xl flex items-center justify-between">
-          <span className="capitalize">{title.replace(/-/g, ' ')}</span>
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-lg sm:text-xl flex items-center justify-between gap-2">
+          <span className="capitalize line-clamp-2">{title.replace(/-/g, ' ')}</span>
           {stars !== undefined && stars > 0 && (
-            <span className="flex items-center gap-1 text-sm text-muted-foreground font-normal">
+            <span className="flex items-center gap-1 text-sm text-muted-foreground font-normal shrink-0">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               {stars}
             </span>
           )}
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col">
-        <CardDescription className="text-base mb-4 flex-1">{description}</CardDescription>
-        <div className="flex flex-wrap gap-2 mb-4">
+      <CardContent className="flex-1 flex flex-col p-4 sm:p-6">
+        <CardDescription className="text-sm sm:text-base mb-3 sm:mb-4 flex-1 line-clamp-3">{description}</CardDescription>
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
           {technologies.slice(0, 5).map((tech, index) => (
-            <Badge key={index} variant="secondary" className="bg-accent/10 text-accent hover:bg-accent/20 capitalize">
+            <Badge key={index} variant="secondary" className="bg-accent/10 text-accent hover:bg-accent/20 capitalize text-xs sm:text-sm">
               {tech}
             </Badge>
           ))}
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           {demoUrl && (
             <Button
               variant="default"

@@ -172,18 +172,18 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="py-16 md:py-24">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Mon Portfolio</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">Mon Portfolio</h1>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                 Découvrez mes projets GitHub mis à jour en temps réel
               </p>
             </div>
 
             {isLoading && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 {[1, 2, 3, 4, 5, 6].map((i) => (
                   <div key={i} className="space-y-3">
                     <Skeleton className="h-48 w-full rounded-lg" />
@@ -204,7 +204,7 @@ const Portfolio = () => {
                     </p>
                   </div>
                 ) : (
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {displayProjects.map((repo) => (
                       <ProjectCard
                         key={repo.id}
