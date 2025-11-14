@@ -28,7 +28,7 @@ const Portfolio = () => {
       description: "Plateforme multi-tenant pour la gestion d'églises avec dashboard administrateur, gestion des fidèles, événements, dons en ligne et système de communication intégré.",
       topics: ["Supabase", "Lovable", "Tailwind CSS", "React"],
       html_url: "#",
-      homepage: null,
+      homepage: "https://saas.offotechword.com",
       stargazers_count: 0,
       image: projectChurch,
     },
