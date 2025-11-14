@@ -54,6 +54,16 @@ const Portfolio = () => {
       homepage: "https://saas.offotechword.com",
       image: projectChurch 
     },
+    "portfolio": {
+      homepage: "https://portfolio.offotechword.com"
+    },
+    "mevos": {
+      homepage: "https://mevos.lovable.app",
+      image: projectMarketplace
+    },
+    "offotechword": {
+      homepage: "https://offotechword.lovable.app"
+    },
   };
 
   // Enrichir les projets GitHub avec les liens et images personnalisés
