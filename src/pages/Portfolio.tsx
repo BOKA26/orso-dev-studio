@@ -3,9 +3,49 @@ import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { useGitHubProjects } from "@/hooks/useGitHubProjects";
 import { Skeleton } from "@/components/ui/skeleton";
+import projectMarketplace from "@/assets/project-marketplace.jpg";
+import projectChurch from "@/assets/project-church.jpg";
+import projectMobile from "@/assets/project-mobile.jpg";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
+
+  // Projets de fallback si GitHub échoue
+  const staticProjects = [
+    {
+      id: 1,
+      name: "BokaTrade Marketplace",
+      description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
+      topics: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
+      html_url: "#",
+      homepage: null,
+      stargazers_count: 0,
+      image: projectMarketplace,
+    },
+    {
+      id: 2,
+      name: "SaaS de Gestion d'Église",
+      description: "Plateforme multi-tenant pour la gestion d'églises avec dashboard administrateur, gestion des fidèles, événements, dons en ligne et système de communication intégré.",
+      topics: ["Supabase", "Lovable", "Tailwind CSS", "React"],
+      html_url: "#",
+      homepage: null,
+      stargazers_count: 0,
+      image: projectChurch,
+    },
+    {
+      id: 3,
+      name: "App Mobile E-Commerce",
+      description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
+      topics: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
+      html_url: "#",
+      homepage: null,
+      stargazers_count: 0,
+      image: projectMobile,
+    },
+  ];
+
+  // Utiliser les projets GitHub ou les projets statiques en fallback
+  const displayProjects = error ? staticProjects : githubProjects;
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,20 +74,9 @@ const Portfolio = () => {
               </div>
             )}
 
-            {error && (
-              <div className="text-center py-12">
-                <p className="text-destructive text-lg">
-                  Erreur lors du chargement des projets GitHub
-                </p>
-                <p className="text-muted-foreground mt-2">
-                  Veuillez vérifier votre connexion internet et réessayer
-                </p>
-              </div>
-            )}
-
-            {!isLoading && !error && githubProjects && (
+            {!isLoading && displayProjects && (
               <>
-                {githubProjects.length === 0 ? (
+                {displayProjects.length === 0 ? (
                   <div className="text-center py-12">
                     <p className="text-muted-foreground text-lg">
                       Aucun projet disponible pour le moment
@@ -55,15 +84,16 @@ const Portfolio = () => {
                   </div>
                 ) : (
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {githubProjects.map((repo) => (
+                    {displayProjects.map((repo) => (
                       <ProjectCard
                         key={repo.id}
                         title={repo.name}
                         description={repo.description || "Aucune description disponible"}
-                        technologies={repo.topics.length > 0 ? repo.topics : [repo.language || "Code"]}
-                        githubUrl={repo.html_url}
+                        technologies={repo.topics.length > 0 ? repo.topics : ["Code"]}
+                        githubUrl={repo.html_url !== "#" ? repo.html_url : undefined}
                         demoUrl={repo.homepage}
                         stars={repo.stargazers_count}
+                        image={"image" in repo ? (repo as any).image : undefined}
                       />
                     ))}
                   </div>
