@@ -7,6 +7,8 @@ import projectMarketplace from "@/assets/project-marketplace.jpg";
 import projectChurch from "@/assets/project-church.jpg";
 import projectMobile from "@/assets/project-mobile.jpg";
 import projectOffotechword from "@/assets/project-offotechword.png";
+import projectMevos from "@/assets/project-mevos.png";
+import projectPortfolio from "@/assets/project-portfolio.png";
 
 const Portfolio = () => {
   const { data: githubProjects, isLoading, error } = useGitHubProjects();
@@ -66,11 +68,16 @@ const Portfolio = () => {
       image: projectChurch 
     },
     "portfolio": {
-      homepage: "https://portfolio.offotechword.com"
+      name: "Portfolio Professionnel Offotechword",
+      description: "Site vitrine professionnel présentant services IA, compétences techniques, projets réalisés et témoignages clients. Design moderne avec blog intégré et système de contact.",
+      homepage: "https://portfolio.offotechword.com",
+      image: projectPortfolio
     },
     "mevos": {
+      name: "MEVOS - Mission Évangélique La Voie du Salut",
+      description: "Plateforme web pour mission évangélique avec gestion de cultes, prières en ligne, verset du jour, espace membre, système de demande de prière et communication WhatsApp intégrée.",
       homepage: "https://mevos.lovable.app",
-      image: projectMarketplace
+      image: projectMevos
     },
     "offotechword": {
       name: "Offotechword - Solutions IA Sans Code",
