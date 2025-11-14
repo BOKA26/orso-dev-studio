@@ -1,31 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
-import projectMarketplace from "@/assets/project-marketplace.jpg";
-import projectChurch from "@/assets/project-church.jpg";
-import projectMobile from "@/assets/project-mobile.jpg";
+import { useGitHubProjects } from "@/hooks/useGitHubProjects";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Portfolio = () => {
-  const projects = [
-    {
-      title: "BokaTrade Marketplace",
-      description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
-      technologies: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
-      image: projectMarketplace,
-    },
-    {
-      title: "SaaS de Gestion d'Église",
-      description: "Plateforme multi-tenant pour la gestion d'églises avec dashboard administrateur, gestion des fidèles, événements, dons en ligne et système de communication intégré.",
-      technologies: ["Supabase", "Lovable", "Tailwind CSS", "React"],
-      image: projectChurch,
-    },
-    {
-      title: "App Mobile E-Commerce",
-      description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
-      technologies: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
-      image: projectMobile,
-    },
-  ];
+  const { data: githubProjects, isLoading, error } = useGitHubProjects();
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,21 +17,59 @@ const Portfolio = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Mon Portfolio</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Découvrez quelques-uns des projets que j'ai réalisés
+                Découvrez mes projets GitHub mis à jour en temps réel
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  technologies={project.technologies}
-                  image={project.image}
-                />
-              ))}
-            </div>
+            {isLoading && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="space-y-3">
+                    <Skeleton className="h-48 w-full rounded-lg" />
+                    <Skeleton className="h-6 w-3/4" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-full" />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {error && (
+              <div className="text-center py-12">
+                <p className="text-destructive text-lg">
+                  Erreur lors du chargement des projets GitHub
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  Veuillez vérifier votre connexion internet et réessayer
+                </p>
+              </div>
+            )}
+
+            {!isLoading && !error && githubProjects && (
+              <>
+                {githubProjects.length === 0 ? (
+                  <div className="text-center py-12">
+                    <p className="text-muted-foreground text-lg">
+                      Aucun projet disponible pour le moment
+                    </p>
+                  </div>
+                ) : (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {githubProjects.map((repo) => (
+                      <ProjectCard
+                        key={repo.id}
+                        title={repo.name}
+                        description={repo.description || "Aucune description disponible"}
+                        technologies={repo.topics.length > 0 ? repo.topics : [repo.language || "Code"]}
+                        githubUrl={repo.html_url}
+                        demoUrl={repo.homepage}
+                        stars={repo.stargazers_count}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
       </section>
