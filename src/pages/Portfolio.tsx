@@ -159,8 +159,14 @@ const Portfolio = () => {
     return repo;
   });
 
-  // Utiliser les projets GitHub enrichis ou les projets statiques en fallback
-  const displayProjects = error ? staticProjects : enrichedGithubProjects;
+  // Fusionner les projets statiques avec les projets GitHub enrichis
+  // En cas d'erreur GitHub, utiliser uniquement les projets statiques
+  const displayProjects = error ? staticProjects : [
+    ...staticProjects,
+    ...(enrichedGithubProjects || []).filter(ghProject => 
+      !staticProjects.some(sp => sp.homepage === ghProject.homepage)
+    )
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -204,7 +210,7 @@ const Portfolio = () => {
                         key={repo.id}
                         title={repo.name}
                         description={repo.description || "Projet de développement web"}
-                        technologies={repo.topics.length > 0 ? repo.topics : [repo.language || "Code"]}
+                        technologies={repo.topics.length > 0 ? repo.topics : ["language" in repo ? repo.language || "Code" : "Code"]}
                         githubUrl={repo.html_url !== "#" ? repo.html_url : undefined}
                         demoUrl={repo.homepage}
                         stars={repo.stargazers_count}
