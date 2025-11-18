@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -187,6 +187,17 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/225757705986"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BA5A] transition-all hover:scale-110 z-50 flex items-center justify-center"
+        aria-label="Contacter sur WhatsApp"
+      >
+        <MessageCircle className="h-6 w-6" />
+      </a>
 
       <Footer />
     </div>
