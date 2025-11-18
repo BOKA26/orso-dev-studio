@@ -148,7 +148,14 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">WhatsApp</h3>
-                        <p className="text-muted-foreground">Disponible sur demande</p>
+                        <a
+                          href="https://wa.me/33757705986"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          +33 7 57 70 59 86
+                        </a>
                       </div>
                     </div>
 
