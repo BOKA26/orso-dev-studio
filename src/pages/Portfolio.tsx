@@ -90,6 +90,16 @@ const Portfolio = () => {
     },
     {
       id: 8,
+      name: "MEVOS - Mission Évangélique La Voie du Salut",
+      description: "Plateforme web pour mission évangélique avec gestion de cultes, prières en ligne, verset du jour, espace membre, système de demande de prière et communication WhatsApp intégrée.",
+      topics: ["Lovable", "React", "Supabase", "WhatsApp", "Église"],
+      html_url: "#",
+      homepage: "https://mevos.lovable.app",
+      stargazers_count: 0,
+      image: projectMevos,
+    },
+    {
+      id: 9,
       name: "App Mobile E-Commerce",
       description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
       topics: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
