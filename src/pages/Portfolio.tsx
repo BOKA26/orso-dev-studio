@@ -20,6 +20,26 @@ const Portfolio = () => {
   const staticProjects = [
     {
       id: 1,
+      name: "Boutique Offotechword",
+      description: "Boutique en ligne e-commerce complète avec gestion de produits, panier d'achat, paiement sécurisé et système de commande en ligne.",
+      topics: ["E-Commerce", "Boutique", "Lovable", "Paiement en ligne"],
+      html_url: "#",
+      homepage: "https://shop.offotechword.com",
+      stargazers_count: 0,
+      image: projectMarketplace,
+    },
+    {
+      id: 2,
+      name: "AfricaTrade Marketplace",
+      description: "Marketplace de commerce africain avec système de gestion de produits, vendeurs, acheteurs et transactions sécurisées pour promouvoir le commerce en Afrique.",
+      topics: ["Marketplace", "Commerce", "Afrique", "Lovable"],
+      html_url: "#",
+      homepage: "https://africatrade.offotechword.com",
+      stargazers_count: 0,
+      image: projectMarketplace,
+    },
+    {
+      id: 3,
       name: "Offotechword - Solutions IA Sans Code",
       description: "Plateforme de services IA sans code pour entreprises et startups. Intégration d'outils IA, création de chatbots intelligents 24/7, automatisation de processus métiers et formation personnalisée.",
       topics: ["IA", "Lovable", "Chatbots", "Automatisation", "No-Code"],
@@ -29,7 +49,7 @@ const Portfolio = () => {
       image: projectOffotechword,
     },
     {
-      id: 2,
+      id: 4,
       name: "La Chambre Haute - Site Web Église",
       description: "Site web pour l'Église Pentecôtiste Unie Internationale de Bingerville. Présentation de l'église, horaires des cultes, diffusion en direct, départements, galerie photos et formulaire de contact.",
       topics: ["Lovable", "Église", "Streaming", "React", "Tailwind CSS"],
@@ -39,7 +59,7 @@ const Portfolio = () => {
       image: projectChambreHaute,
     },
     {
-      id: 3,
+      id: 5,
       name: "DADI - Site Web ONG",
       description: "Site web pour l'ONG Droit À la Différence. Prévention VIH/SIDA, accompagnement psychologique, lutte contre les violences basées sur le genre, système de dons en ligne et galerie de projets.",
       topics: ["Lovable", "ONG", "Solidarité", "Dons en ligne", "React"],
@@ -49,7 +69,7 @@ const Portfolio = () => {
       image: projectDadi,
     },
     {
-      id: 3,
+      id: 6,
       name: "BokaTrade Marketplace",
       description: "Marketplace complète avec système multi-rôle (vendeur, acheteur, livreur), escrow pour sécuriser les transactions, paiement intégré via Paystack, géolocalisation Mapbox et application mobile.",
       topics: ["Lovable", "Supabase", "Paystack", "Mapbox", "Capacitor"],
@@ -59,7 +79,7 @@ const Portfolio = () => {
       image: projectMarketplace,
     },
     {
-      id: 4,
+      id: 7,
       name: "EgliConnect - SaaS de Gestion d'Église",
       description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
       topics: ["Supabase", "Lovable", "Paystack", "OpenAI", "Multi-tenant"],
@@ -69,7 +89,7 @@ const Portfolio = () => {
       image: projectEgliConnect,
     },
     {
-      id: 5,
+      id: 8,
       name: "App Mobile E-Commerce",
       description: "Application mobile e-commerce complète avec catalogue produits, panier d'achat, paiement sécurisé, notifications push et synchronisation temps réel.",
       topics: ["Capacitor", "Lovable", "Supabase", "Push Notifications"],
@@ -82,7 +102,19 @@ const Portfolio = () => {
 
   // Mapping des liens homepage pour certains projets GitHub
   const projectLinks: Record<string, { homepage?: string; image?: string; name?: string; description?: string }> = {
-    "saas-gestion-d-eglise": { 
+    "shop": {
+      name: "Boutique Offotechword",
+      description: "Boutique en ligne e-commerce complète avec gestion de produits, panier d'achat, paiement sécurisé et système de commande en ligne.",
+      homepage: "https://shop.offotechword.com",
+      image: projectMarketplace
+    },
+    "africatrade": {
+      name: "AfricaTrade Marketplace",
+      description: "Marketplace de commerce africain avec système de gestion de produits, vendeurs, acheteurs et transactions sécurisées pour promouvoir le commerce en Afrique.",
+      homepage: "https://africatrade.offotechword.com",
+      image: projectMarketplace
+    },
+    "saas-gestion-d-eglise": {
       name: "EgliConnect - SaaS de Gestion d'Église",
       description: "Plateforme SaaS multi-tenant pour la gestion complète d'églises. Gestion des membres et fidèles, suivi des dons avec paiement Paystack, demandes de prière, annonces et événements, sécurité multi-tenant et assistant spirituel IA intégré.",
       homepage: "https://saas.offotechword.com",
