@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Megaphone } from "lucide-react";
+import { Code, Smartphone, Palette, Megaphone, Briefcase } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkillCard from "@/components/SkillCard";
@@ -10,21 +10,25 @@ const Skills = () => {
       icon: Code,
       skills: [
         "Création de sites professionnels",
+        "Référencement SEO et optimisation Google",
         "Front-end moderne",
         "URLs propres",
         "Responsive design",
         "Performance optimisée",
+        "Portfolio multimédia intelligent",
       ],
     },
     {
       title: "No-Code / Low-Code",
       icon: Smartphone,
       skills: [
-        "Lovable.dev (expert)",
+        "Création de sites IA avec Lovable.dev",
         "Supabase (Auth, DB, API, RLS)",
+        "Intégration d'APIs externes (Eventbrite, Calendly)",
+        "Intégration de paiements (Paystack / CinetPay / Stripe)",
+        "Création d'un chatbot IA avec OpenAI",
         "Capacitor (App mobile)",
         "n8n (automatisation)",
-        "Intégrations API",
       ],
     },
     {
@@ -45,8 +49,19 @@ const Skills = () => {
         "Stratégie digitale",
         "Branding",
         "Présentations professionnelles",
+        "Rédaction et présentation d'un pitch de 30 secondes",
         "Gestion de contenu",
         "Social media",
+      ],
+    },
+    {
+      title: "Business & SaaS",
+      icon: Briefcase,
+      skills: [
+        "Conception d'un MVP SaaS complet",
+        "Application du Business Model Canvas (BMC)",
+        "Élaboration d'une stratégie de lancement produit",
+        "Monétisation et gestion d'abonnements SaaS",
       ],
     },
   ];
