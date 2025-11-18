@@ -43,23 +43,23 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Contactez-moi</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Un projet en tête ? N'hésitez pas à me contacter
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Contactez-moi</h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Vous avez un projet web en tête ? Discutons-en ensemble. Je réponds sous 24h.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <Card>
+              <Card className="border-2 hover:border-accent transition-colors shadow-medium">
                 <CardHeader>
-                  <CardTitle>Envoyez un message</CardTitle>
-                  <CardDescription>
-                    Remplissez le formulaire ci-dessous et je vous répondrai rapidement.
+                  <CardTitle className="text-2xl font-bold">Envoyez un message</CardTitle>
+                  <CardDescription className="text-base">
+                    Décrivez votre projet ou votre besoin, je vous répondrai rapidement.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -111,11 +111,16 @@ const Contact = () => {
 
                     <Button
                       type="submit"
-                      className="w-full"
+                      className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
                       disabled={isSubmitting}
+                      size="lg"
                     >
                       {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                     </Button>
+                    <p className="text-sm text-muted-foreground text-center mt-4 leading-relaxed">
+                      🔒 Vos données sont protégées conformément au RGPD. 
+                      <br />Consultez nos <a href="/legal-notice" className="text-accent hover:underline font-medium">mentions légales</a>.
+                    </p>
                   </form>
                 </CardContent>
               </Card>

@@ -61,32 +61,34 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-95" />
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden bg-primary min-h-[600px] flex items-center">
+        <div className="absolute inset-0 opacity-10">
           <img
             src={heroImage}
-            alt="Hero"
-            className="w-full h-full object-cover opacity-30"
+            alt="Hero background"
+            className="w-full h-full object-cover"
           />
         </div>
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              Développeur Web & No-Code
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Développeur Full-Stack Freelance
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in">
-              Je crée des SaaS, marketplaces et sites professionnels modernes.
+            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 font-light">
+              Je conçois des applications web modernes
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white">
-                <Link to="/portfolio">
-                  Voir mes projets <ArrowRight className="ml-2 h-5 w-5" />
+            <p className="text-lg md:text-xl text-white/85 mb-10 max-w-2xl">
+              SaaS, marketplaces, sites vitrine — Des solutions digitales complètes, du design au déploiement.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-semibold shadow-large">
+                <Link to="/contact">
+                  Contactez-moi <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20">
-                <Link to="/contact">Me contacter</Link>
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold">
+                <Link to="/portfolio">Voir mes projets</Link>
               </Button>
             </div>
           </div>
@@ -94,81 +96,92 @@ const Index = () => {
       </section>
 
       {/* Mini Bio Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">À propos de moi</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Je suis <span className="text-accent font-semibold">Orso Boka Jean</span>, développeur web no-code et designer.
-              Titulaire d'une Licence 2 en Développement de Sites Internet, formé en Communication et Infographie.
-              Je crée des plateformes modernes, rapides, sécurisées et prêtes pour la production.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-foreground">Qui suis-je ?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
+              Je suis <span className="text-accent font-bold">Orso Boka Jean</span>, développeur full-stack freelance spécialisé en solutions no-code avancées.
+              Avec une expertise en <span className="text-primary font-semibold">Lovable, Supabase, React et TypeScript</span>, 
+              je transforme vos idées en produits digitaux performants et évolutifs.
             </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Du design à l'intégration, en passant par la gestion de base de données et le déploiement — 
+              <span className="text-primary font-semibold"> je prends en charge l'ensemble du cycle de développement</span>.
+            </p>
+            <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-white">
+              <Link to="/about">Découvrir mon parcours <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* What I Do Section */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ce que je fais</h2>
-            <p className="text-lg text-muted-foreground">
-              Des solutions digitales complètes pour vos projets
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Mes Services</h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Des solutions digitales complètes pour concrétiser vos projets
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-medium transition-all duration-300 hover:scale-105">
+              <Card key={index} className="text-center hover:shadow-large transition-all duration-300 hover:-translate-y-2 border-2 hover:border-accent bg-card">
                 <CardHeader>
-                  <div className="p-3 rounded-lg bg-accent/10 w-fit mb-4">
-                    <service.icon className="h-8 w-8 text-accent" />
+                  <div className="mx-auto mb-6 w-20 h-20 bg-accent/15 rounded-2xl flex items-center justify-center">
+                    <service.icon className="w-10 h-10 text-accent" />
                   </div>
-                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl text-foreground font-bold mb-3">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
+                  <CardDescription className="text-base md:text-lg text-muted-foreground leading-relaxed">{service.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
+              <Link to="/services">Découvrir tous mes services</Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Infographic Gallery Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Design & Infographie</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Communication visuelle percutante pour valoriser vos données et messages
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Design & Communication</h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Création d'identités visuelles, infographies et supports de communication professionnels
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {infographics.map((item, index) => (
               <Card 
                 key={index} 
-                className="overflow-hidden hover:shadow-medium transition-all duration-500 hover:scale-105 animate-fade-in group"
+                className="overflow-hidden hover:shadow-large transition-all duration-500 hover:-translate-y-2 border-2 hover:border-accent animate-fade-in group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative aspect-video overflow-hidden">
+                <div className="relative aspect-video overflow-hidden bg-secondary/30">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                     <div className="flex items-center gap-3 text-white">
-                      <div className="p-2 rounded-lg bg-accent/90">
-                        <item.icon className="h-5 w-5" />
+                      <div className="p-2 rounded-lg bg-accent">
+                        <item.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg">{item.title}</h3>
-                        <p className="text-sm text-white/90">{item.description}</p>
+                        <h3 className="font-bold text-lg">{item.title}</h3>
+                        <p className="text-sm text-white/95 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   </div>
@@ -178,7 +191,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link to="/portfolio">
                 Voir tous mes projets <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
