@@ -109,9 +109,26 @@ const Footer = () => {
 
         {/* Ligne de séparation et copyright */}
         <div className="border-t border-border mt-12 pt-8">
-          <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Orso Boka Jean. Tous droits réservés.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Orso Boka Jean. Tous droits réservés.
+            </p>
+            <div className="flex items-center gap-4 text-sm">
+              <Link 
+                to="/legal-notice" 
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                Mentions légales
+              </Link>
+              <span className="text-muted-foreground">•</span>
+              <a 
+                href="mailto:orso.aka28@gmail.com" 
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
