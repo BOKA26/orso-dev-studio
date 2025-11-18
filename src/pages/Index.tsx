@@ -61,57 +61,128 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-primary min-h-[600px] flex items-center">
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative overflow-hidden bg-primary min-h-[650px] md:min-h-[700px] flex items-center">
+        {/* Image de fond avec overlay sombre pour meilleur contraste */}
+        <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Hero background"
+            alt="Développement web moderne"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary/85"></div>
         </div>
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Développeur Full-Stack Freelance
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="max-w-5xl">
+            {/* Badge professionnel */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full mb-6 border border-accent/30">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+              <span className="text-sm font-semibold text-white">Disponible pour vos projets</span>
+            </div>
+            
+            {/* Nom du développeur mis en avant */}
+            <p className="text-lg md:text-xl text-accent font-bold mb-3 tracking-wide uppercase">
+              Orso Boka Jean
+            </p>
+            
+            {/* Titre principal avec hiérarchie claire */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
+              Développeur Full-Stack
+              <br />
+              <span className="text-accent">Freelance</span>
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 font-light">
-              Je conçois des applications web modernes
+            
+            {/* Accroche percutante et concise */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 font-medium leading-relaxed">
+              Je conçois vos applications web et mobiles sur mesure
             </p>
-            <p className="text-lg md:text-xl text-white/85 mb-10 max-w-2xl">
-              SaaS, marketplaces, sites vitrine — Des solutions digitales complètes, du design au déploiement.
+            
+            <p className="text-base md:text-lg lg:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed">
+              SaaS, marketplaces, sites vitrine — Des solutions digitales complètes, performantes et évolutives, de la conception au déploiement.
             </p>
+            
+            {/* CTAs bien visibles avec icônes */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-semibold shadow-large">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-large hover:shadow-xl transition-all hover:scale-105 text-base md:text-lg px-8 py-6"
+              >
                 <Link to="/contact">
-                  Contactez-moi <ArrowRight className="ml-2 h-5 w-5" />
+                  Contactez-moi 
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold">
-                <Link to="/portfolio">Voir mes projets</Link>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white/90 text-white hover:bg-white hover:text-primary font-bold backdrop-blur-sm bg-white/10 transition-all hover:scale-105 text-base md:text-lg px-8 py-6"
+              >
+                <Link to="/portfolio">
+                  Découvrir mes projets
+                </Link>
               </Button>
             </div>
           </div>
         </div>
+        
+        {/* Élément décoratif pour renforcer l'identité visuelle */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* Mini Bio Section */}
+      {/* Mini Bio Section - Contenu équilibré */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-foreground">Qui suis-je ?</h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              Je suis <span className="text-accent font-bold">Orso Boka Jean</span>, développeur full-stack freelance spécialisé en solutions no-code avancées.
-              Avec une expertise en <span className="text-primary font-semibold">Lovable, Supabase, React et TypeScript</span>, 
-              je transforme vos idées en produits digitaux performants et évolutifs.
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Du design à l'intégration, en passant par la gestion de base de données et le déploiement — 
-              <span className="text-primary font-semibold"> je prends en charge l'ensemble du cycle de développement</span>.
-            </p>
-            <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-white">
-              <Link to="/about">Découvrir mon parcours <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
+          <div className="max-w-4xl mx-auto">
+            {/* Badge de section */}
+            <div className="flex justify-center mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-sm font-bold text-accent uppercase tracking-wider">
+                À propos
+              </span>
+            </div>
+            
+            <h2 className="text-3xl md:text-5xl font-bold mb-10 text-foreground text-center">
+              Qui suis-je ?
+            </h2>
+            
+            <div className="space-y-6 text-center">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Je suis <span className="text-accent font-bold">Orso Boka Jean</span>, développeur full-stack freelance passionné par la création de solutions digitales innovantes.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Expert en <span className="text-primary font-semibold">Lovable, Supabase, React et TypeScript</span>, 
+                je transforme vos idées en produits digitaux performants et évolutifs. 
+                Du design à l'intégration, en passant par la gestion de base de données et le déploiement — 
+                <span className="text-primary font-semibold"> je maîtrise l'ensemble du cycle de développement</span>.
+              </p>
+              
+              {/* Mise en avant des compétences clés */}
+              <div className="flex flex-wrap justify-center gap-3 pt-6">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-lg font-semibold text-sm">
+                  React & TypeScript
+                </span>
+                <span className="px-4 py-2 bg-accent/10 text-accent rounded-lg font-semibold text-sm">
+                  Lovable & Supabase
+                </span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-lg font-semibold text-sm">
+                  UI/UX Design
+                </span>
+                <span className="px-4 py-2 bg-accent/10 text-accent rounded-lg font-semibold text-sm">
+                  Mobile Apps
+                </span>
+              </div>
+              
+              <div className="pt-4">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold shadow-medium hover:shadow-large transition-all">
+                  <Link to="/about">
+                    Découvrir mon parcours 
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -119,32 +190,56 @@ const Index = () => {
       {/* What I Do Section */}
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Badge de section */}
+          <div className="flex justify-center mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary uppercase tracking-wider">
+              Mes services
+            </span>
+          </div>
+          
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Mes Services</h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Des solutions digitales complètes pour concrétiser vos projets
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+              Ce que je peux faire pour vous
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Des solutions digitales complètes et sur mesure pour concrétiser vos projets ambitieux
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-large transition-all duration-300 hover:-translate-y-2 border-2 hover:border-accent bg-card">
+              <Card 
+                key={index} 
+                className="text-center hover:shadow-large transition-all duration-300 hover:-translate-y-2 border-2 hover:border-accent bg-card group"
+              >
                 <CardHeader>
-                  <div className="mx-auto mb-6 w-20 h-20 bg-accent/15 rounded-2xl flex items-center justify-center">
+                  <div className="mx-auto mb-6 w-20 h-20 bg-accent/15 rounded-2xl flex items-center justify-center group-hover:bg-accent/25 transition-colors">
                     <service.icon className="w-10 h-10 text-accent" />
                   </div>
-                  <CardTitle className="text-xl md:text-2xl text-foreground font-bold mb-3">{service.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl text-foreground font-bold mb-3">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base md:text-lg text-muted-foreground leading-relaxed">{service.description}</CardDescription>
+                  <CardDescription className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
           </div>
           
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-              <Link to="/services">Découvrir tous mes services</Link>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="default" 
+              className="bg-primary hover:bg-primary/90 font-bold shadow-medium hover:shadow-large transition-all"
+            >
+              <Link to="/services">
+                Découvrir tous mes services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -153,10 +248,19 @@ const Index = () => {
       {/* Infographic Gallery Section */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Badge de section */}
+          <div className="flex justify-center mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-sm font-bold text-accent uppercase tracking-wider">
+              Portfolio Design
+            </span>
+          </div>
+          
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Design & Communication</h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Création d'identités visuelles, infographies et supports de communication professionnels
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+              Design & Communication Visuelle
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Création d'identités visuelles impactantes, infographies professionnelles et supports de communication sur mesure
             </p>
           </div>
 
