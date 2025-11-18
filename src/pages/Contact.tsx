@@ -149,7 +149,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-1">WhatsApp</h3>
                         <a
-                          href="https://wa.me/22557705986?text=Bonjour"
+                          href="https://api.whatsapp.com/send?phone=22557705986&text=Bonjour&type=phone_number&app_absent=0"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-accent transition-colors"
@@ -190,7 +190,7 @@ const Contact = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/22557705986?text=Bonjour"
+        href="https://api.whatsapp.com/send?phone=22557705986&text=Bonjour&type=phone_number&app_absent=0"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20BA5A] transition-all hover:scale-110 z-50 flex items-center justify-center"
