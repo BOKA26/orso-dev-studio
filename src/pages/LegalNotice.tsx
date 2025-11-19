@@ -25,16 +25,16 @@ const LegalNotice = () => {
                     <strong className="text-foreground">Statut :</strong> Développeur Web Freelance Indépendant
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    <strong className="text-foreground">Adresse :</strong> Cotonou, Bénin
+                    <strong className="text-foreground">Adresse :</strong> Abidjan, Bingerville, Côte d'Ivoire
                   </p>
                   <p className="text-muted-foreground mb-4">
                     <strong className="text-foreground">Email :</strong>{" "}
-                    <a href="mailto:orsobokajean@gmail.com" className="text-accent hover:underline">
-                      orsobokajean@gmail.com
+                    <a href="mailto:orso.boka28@gmail.com" className="text-accent hover:underline">
+                      orso.boka28@gmail.com
                     </a>
                   </p>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">Téléphone :</strong> +229 96 49 19 23
+                    <strong className="text-foreground">Téléphone :</strong> +225 0757705986
                   </p>
                 </CardContent>
               </Card>
@@ -86,8 +86,8 @@ const LegalNotice = () => {
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité 
                     de vos données personnelles. Pour exercer ces droits, contactez-nous à :{" "}
-                    <a href="mailto:orsobokajean@gmail.com" className="text-accent hover:underline">
-                      orsobokajean@gmail.com
+                    <a href="mailto:orso.boka28@gmail.com" className="text-accent hover:underline">
+                      orso.boka28@gmail.com
                     </a>
                   </p>
 
