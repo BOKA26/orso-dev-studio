@@ -242,6 +242,18 @@ const Contact = () => {
                       {isSubmitting ? "Préparation..." : "Envoyer via WhatsApp"}
                     </Button>
                     
+                    <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Protection de vos données :</strong> Les informations recueillies via ce formulaire 
+                        sont uniquement utilisées pour vous répondre et ne seront jamais partagées avec des tiers. 
+                        Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, 
+                        de rectification et de suppression des données vous concernant.{" "}
+                        <a href="/legal-notice" className="text-accent hover:underline font-medium">
+                          En savoir plus
+                        </a>
+                      </p>
+                    </div>
+                    
                     <p className="text-xs text-center text-muted-foreground">
                       * Champs obligatoires
                     </p>
