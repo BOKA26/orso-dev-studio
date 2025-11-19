@@ -1,4 +1,4 @@
-import { Code, Smartphone, Palette, Megaphone, Briefcase } from "lucide-react";
+import { Monitor, Settings, Palette, Megaphone, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkillCard from "@/components/SkillCard";
@@ -7,61 +7,59 @@ const Skills = () => {
   const skillsData = [
     {
       title: "Web & Mobile",
-      icon: Code,
+      icon: Monitor,
       skills: [
-        "Création de sites professionnels",
-        "Référencement SEO et optimisation Google",
-        "Front-end moderne",
-        "URLs propres",
+        "Développement de sites professionnels",
+        "Front-end moderne (React, Tailwind, Next.js)",
         "Responsive design",
+        "SEO & optimisation Google",
         "Performance optimisée",
-        "Portfolio multimédia intelligent",
+        "URLs propres",
       ],
     },
     {
       title: "No-Code / Low-Code",
-      icon: Smartphone,
+      icon: Settings,
       skills: [
         "Création de sites IA avec Lovable.dev",
         "Supabase (Auth, DB, API, RLS)",
-        "Intégration d'APIs externes (Eventbrite, Calendly)",
-        "Intégration de paiements (Paystack / CinetPay / Stripe)",
-        "Création d'un chatbot IA avec OpenAI",
-        "Capacitor (App mobile)",
-        "n8n (automatisation)",
+        "Intégration d'APIs externes",
+        "Automatisation n8n",
+        "Apps mobiles avec Capacitor",
+        "Intégration de paiements (Paystack, Stripe, CinetPay)",
       ],
     },
     {
-      title: "Design",
+      title: "Design & Identité",
       icon: Palette,
       skills: [
-        "Logos & Identité visuelle",
-        "Affiches & Supports print",
+        "Logos & identités visuelles",
         "UI/UX Design",
         "Prototypage",
-        "Charte graphique",
+        "Affiches & supports print",
+        "Création de chartes graphiques",
       ],
     },
     {
-      title: "Communication",
+      title: "Communication digitale",
       icon: Megaphone,
       skills: [
-        "Stratégie digitale",
+        "Stratégies digitales",
         "Branding",
         "Présentations professionnelles",
-        "Rédaction et présentation d'un pitch de 30 secondes",
-        "Gestion de contenu",
-        "Social media",
+        "Conception de pitch (30 secondes)",
+        "Social media & gestion de contenu",
       ],
     },
     {
       title: "Business & SaaS",
-      icon: Briefcase,
+      icon: TrendingUp,
       skills: [
         "Conception d'un MVP SaaS complet",
-        "Application du Business Model Canvas (BMC)",
-        "Élaboration d'une stratégie de lancement produit",
-        "Monétisation et gestion d'abonnements SaaS",
+        "Business Model Canvas (BMC)",
+        "Stratégie de lancement produit",
+        "Monétisation SaaS",
+        "Gestion d'abonnements",
       ],
     },
   ];
@@ -70,17 +68,19 @@ const Skills = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Mes Compétences</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Mes Compétences
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Une expertise complète pour transformer vos idées en solutions digitales performantes
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {skillsData.map((skill, index) => (
                 <SkillCard
                   key={index}
