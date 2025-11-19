@@ -69,29 +69,31 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:orso.aka28@gmail.com"
+                  href="mailto:orsobokajean@gmail.com"
                   className="text-sm text-muted-foreground hover:text-accent transition-colors font-medium hover:underline"
                 >
-                  orso.aka28@gmail.com
+                  orsobokajean@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <div className="text-sm text-muted-foreground font-medium">
-                  <div>+225 0757705986</div>
-                  <div>+225 0564945806</div>
-                </div>
+                <a
+                  href="tel:+22996491923"
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors font-medium hover:underline"
+                >
+                  +229 96 49 19 23
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-medium">Abidjan, Bergerville, Côte d'Ivoire</span>
+                <span className="text-sm text-muted-foreground font-medium">Cotonou, Bénin</span>
               </li>
             </ul>
 
             {/* Réseaux sociaux */}
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="mailto:orso.aka28@gmail.com"
+                href="mailto:orsobokajean@gmail.com"
                 className="p-3 rounded-xl bg-card hover:bg-accent hover:text-primary transition-all shadow-soft hover:shadow-medium hover:-translate-y-1"
                 aria-label="Envoyer un email"
                 title="Envoyer un email"
@@ -99,7 +101,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/orso-boka-jean"
+                href="https://www.linkedin.com/in/orso-boka-jean-0a0a0a0a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-card hover:bg-accent hover:text-primary transition-all shadow-soft hover:shadow-medium hover:-translate-y-1"
@@ -109,7 +111,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/orsoboka"
+                href="https://github.com/orsobokajean"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-card hover:bg-accent hover:text-primary transition-all shadow-soft hover:shadow-medium hover:-translate-y-1"

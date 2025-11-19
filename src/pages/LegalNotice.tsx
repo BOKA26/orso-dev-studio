@@ -22,19 +22,19 @@ const LegalNotice = () => {
                     <strong className="text-foreground">Nom :</strong> Orso Boka Jean
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    <strong className="text-foreground">Statut :</strong> Développeur Web Freelance
+                    <strong className="text-foreground">Statut :</strong> Développeur Web Freelance Indépendant
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    <strong className="text-foreground">Adresse :</strong> Abidjan, Bergerville, Côte d'Ivoire
+                    <strong className="text-foreground">Adresse :</strong> Cotonou, Bénin
                   </p>
                   <p className="text-muted-foreground mb-4">
                     <strong className="text-foreground">Email :</strong>{" "}
-                    <a href="mailto:orso.aka28@gmail.com" className="text-accent hover:underline">
-                      orso.aka28@gmail.com
+                    <a href="mailto:orsobokajean@gmail.com" className="text-accent hover:underline">
+                      orsobokajean@gmail.com
                     </a>
                   </p>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">Téléphone :</strong> 0757705986 / 0564945806
+                    <strong className="text-foreground">Téléphone :</strong> +229 96 49 19 23
                   </p>
                 </CardContent>
               </Card>
@@ -86,8 +86,8 @@ const LegalNotice = () => {
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité 
                     de vos données personnelles. Pour exercer ces droits, contactez-nous à :{" "}
-                    <a href="mailto:orso.aka28@gmail.com" className="text-accent hover:underline">
-                      orso.aka28@gmail.com
+                    <a href="mailto:orsobokajean@gmail.com" className="text-accent hover:underline">
+                      orsobokajean@gmail.com
                     </a>
                   </p>
 
@@ -137,8 +137,11 @@ const LegalNotice = () => {
               </Card>
             </div>
 
-            <div className="mt-12 text-center text-muted-foreground">
-              <p>Dernière mise à jour : Novembre 2025</p>
+            <div className="mt-12 text-center text-muted-foreground text-sm">
+              <p>Dernière mise à jour : 19 Novembre 2025</p>
+              <p className="mt-2">
+                Entreprise individuelle — Activité professionnelle déclarée
+              </p>
             </div>
           </div>
         </div>
