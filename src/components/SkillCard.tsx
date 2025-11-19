@@ -9,21 +9,21 @@ interface SkillCardProps {
 
 const SkillCard = ({ title, skills, icon: Icon }: SkillCardProps) => {
   return (
-    <Card className="hover:shadow-medium transition-all duration-300 hover:scale-105">
-      <CardHeader>
-        <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-accent/10">
-            <Icon className="h-6 w-6 text-accent" />
+    <Card className="group hover:shadow-medium transition-all duration-300 hover:scale-[1.02] rounded-xl border-border/50 bg-card h-full">
+      <CardHeader className="pb-4">
+        <div className="flex items-center gap-4 mb-2">
+          <div className="p-3 rounded-xl bg-accent/10 group-hover:bg-accent/20 transition-colors">
+            <Icon className="h-8 w-8 text-accent" />
           </div>
-          <CardTitle className="text-xl">{title}</CardTitle>
+          <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         </div>
       </CardHeader>
-      <CardContent>
-        <ul className="space-y-2">
+      <CardContent className="pt-0">
+        <ul className="space-y-3">
           {skills.map((skill, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span className="text-muted-foreground">{skill}</span>
+            <li key={index} className="flex items-start gap-3">
+              <span className="text-accent text-lg mt-0.5 font-bold">•</span>
+              <span className="text-foreground/80 leading-relaxed">{skill}</span>
             </li>
           ))}
         </ul>
