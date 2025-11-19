@@ -48,7 +48,7 @@ const Contact = () => {
       const whatsappMessage = encodeURIComponent(
         `*Nouveau message depuis le portfolio*\n\nNom: ${validatedData.name}\nEmail: ${validatedData.email}\n\nMessage:\n${validatedData.message}`
       );
-      const whatsappUrl = `https://wa.me/22996491923?text=${whatsappMessage}`;
+      const whatsappUrl = `https://wa.me/2250757705986?text=${whatsappMessage}`;
 
       // Ouvrir WhatsApp dans un nouvel onglet
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -95,21 +95,21 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "orsobokajean@gmail.com",
-      href: "mailto:orsobokajean@gmail.com",
+      value: "orso.boka28@gmail.com",
+      href: "mailto:orso.boka28@gmail.com",
       description: "Réponse sous 24h"
     },
     {
       icon: Phone,
       title: "Téléphone / WhatsApp",
-      value: "+229 96 49 19 23",
-      href: "tel:+22996491923",
+      value: "+225 0757705986",
+      href: "tel:+2250757705986",
       description: "Lun-Ven 9h-18h"
     },
     {
       icon: MapPin,
       title: "Localisation",
-      value: "Cotonou, Bénin",
+      value: "Abidjan, Bingerville, Côte d'Ivoire",
       description: "Disponible en remote"
     }
   ];
@@ -343,7 +343,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-bold text-lg mb-2 text-foreground">🌍 Zone géographique</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                          Basé à <span className="text-foreground font-semibold">Cotonou, Bénin</span>. 
+                          Basé à <span className="text-foreground font-semibold">Abidjan, Bingerville, Côte d'Ivoire</span>. 
                           Je travaille principalement en <span className="text-accent font-semibold">remote</span> avec des clients 
                           dans toute l'Afrique francophone et en Europe.
                         </p>

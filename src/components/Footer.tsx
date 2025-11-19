@@ -69,31 +69,31 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:orsobokajean@gmail.com"
+                  href="mailto:orso.boka28@gmail.com"
                   className="text-sm text-muted-foreground hover:text-accent transition-colors font-medium hover:underline"
                 >
-                  orsobokajean@gmail.com
+                  orso.boka28@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <a
-                  href="tel:+22996491923"
+                  href="tel:+2250757705986"
                   className="text-sm text-muted-foreground hover:text-accent transition-colors font-medium hover:underline"
                 >
-                  +229 96 49 19 23
+                  +225 0757705986
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-medium">Cotonou, Bénin</span>
+                <span className="text-sm text-muted-foreground font-medium">Abidjan, Bingerville, Côte d'Ivoire</span>
               </li>
             </ul>
 
             {/* Réseaux sociaux */}
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="mailto:orsobokajean@gmail.com"
+                href="mailto:orso.boka28@gmail.com"
                 className="p-3 rounded-xl bg-card hover:bg-accent hover:text-primary transition-all shadow-soft hover:shadow-medium hover:-translate-y-1"
                 aria-label="Envoyer un email"
                 title="Envoyer un email"
