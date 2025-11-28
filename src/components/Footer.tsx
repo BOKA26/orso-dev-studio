@@ -130,7 +130,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground font-medium">
               © {new Date().getFullYear()} <span className="text-foreground font-bold">Orso Boka Jean</span> — Tous droits réservés.
             </p>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm">
               <Link 
                 to="/legal-notice" 
                 className="text-muted-foreground hover:text-accent transition-colors font-semibold hover:underline"
@@ -139,20 +139,25 @@ const Footer = () => {
               </Link>
               <span className="text-muted-foreground">•</span>
               <Link 
+                to="/terms-of-service" 
+                className="text-muted-foreground hover:text-accent transition-colors font-semibold hover:underline"
+              >
+                Conditions de service
+              </Link>
+              <span className="text-muted-foreground">•</span>
+              <Link 
+                to="/privacy-policy" 
+                className="text-muted-foreground hover:text-accent transition-colors font-semibold hover:underline"
+              >
+                Politique de confidentialité
+              </Link>
+              <span className="text-muted-foreground">•</span>
+              <Link 
                 to="/contact" 
                 className="text-muted-foreground hover:text-accent transition-colors font-semibold hover:underline"
               >
                 Me contacter
               </Link>
-              <span className="text-muted-foreground">•</span>
-              <a 
-                href="https://bska.offotechword.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-accent transition-colors font-semibold hover:underline"
-              >
-                Portfolio
-              </a>
             </div>
           </div>
         </div>
